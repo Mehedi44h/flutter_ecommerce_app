@@ -1,4 +1,8 @@
 import 'package:fecommerce/const/AppColors.dart';
+import 'package:fecommerce/ui/bottom_nav_pages/cart.dart';
+import 'package:fecommerce/ui/bottom_nav_pages/favourite.dart';
+import 'package:fecommerce/ui/bottom_nav_pages/home.dart';
+import 'package:fecommerce/ui/bottom_nav_pages/profile.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_ecommerce/const/AppColors.dart';
 // import 'package:flutter_ecommerce/ui/bottom_nav_pages/cart.dart';
@@ -13,10 +17,10 @@ class BottomNavController extends StatefulWidget {
 
 class _BottomNavControllerState extends State<BottomNavController> {
   final _pages = [
-    // Home(),
-    // Favourite(),
-    // Cart(),
-    // Profile(),
+    Home(),
+    Favourite(),
+    Cart(),
+    Profile(),
   ];
   var _currentIndex = 0;
 
@@ -44,19 +48,19 @@ class _BottomNavControllerState extends State<BottomNavController> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            // title: Text("Home"),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_outline), 
-              // title: Text("Favourite")
-              ),
+            icon: Icon(Icons.favorite_outline),
+            label: 'Favourite',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_shopping_cart),
-            // title: Text("Cart"),
+            label: "Cart",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            // title: Text("Person"),
+            label: "Person",
           ),
         ],
         onTap: (index) {

@@ -28,7 +28,8 @@ class _LoginScreenState extends State<LoginScreen> {
       var authCredential = userCredential.user;
       print(authCredential!.uid);
       if (authCredential.uid.isNotEmpty) {
-        Navigator.push(context, CupertinoPageRoute(builder: (_) => UserForm()));
+        Navigator.push(
+            context, CupertinoPageRoute(builder: (_) => BottomNavController()));
       } else {
         Fluttertoast.showToast(msg: "Something is wrong");
       }
