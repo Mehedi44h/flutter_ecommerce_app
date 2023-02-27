@@ -1,5 +1,8 @@
 import 'package:fecommerce/const/AppColors.dart';
+import 'package:fecommerce/pages/home.dart';
+import 'package:fecommerce/ui/bottom_nav_controller.dart';
 import 'package:fecommerce/ui/registration.dart';
+import 'package:fecommerce/ui/user_form.dart';
 import 'package:fecommerce/widgets/customButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,8 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
       var authCredential = userCredential.user;
       print(authCredential!.uid);
       if (authCredential.uid.isNotEmpty) {
-        // Navigator.push(
-        //     context, CupertinoPageRoute(builder: (_) => BottomNavController()));
+        Navigator.push(context, CupertinoPageRoute(builder: (_) => UserForm()));
       } else {
         Fluttertoast.showToast(msg: "Something is wrong");
       }

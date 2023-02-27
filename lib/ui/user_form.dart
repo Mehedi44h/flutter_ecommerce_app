@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fecommerce/const/AppColors.dart';
+import 'package:fecommerce/homepage.dart';
 import 'package:fecommerce/ui/bottom_nav_controller.dart';
 import 'package:fecommerce/widgets/customButton.dart';
 import 'package:fecommerce/widgets/myTextField.dart';
@@ -54,7 +55,7 @@ class _UserFormState extends State<UserForm> {
           "age": _ageController.text,
         })
         .then((value) => Navigator.push(
-            context, MaterialPageRoute(builder: (_) => BottomNavController())),
+            context, MaterialPageRoute(builder: (_) => HomePage())),
             )
         .catchError((error) => print("something is wrong. $error"));
   }
