@@ -17,8 +17,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<String> _carouselImages = [];
-  var _dotPosition = 0;
   List _products = [];
+  var _dotPosition = 0;
   var _firestoreInstance = FirebaseFirestore.instance;
 
   fetchCarouselImages() async {
