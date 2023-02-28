@@ -11,6 +11,7 @@ class _ProfileState extends State<Profile> {
   TextEditingController? _nameController;
   TextEditingController? _phoneController;
   TextEditingController? _ageController;
+  TextEditingController? _genderController;
 
   setDataToTextField(data) {
     return Column(
@@ -26,6 +27,10 @@ class _ProfileState extends State<Profile> {
         TextFormField(
           controller: _ageController = TextEditingController(text: data['age']),
         ),
+        TextFormField(
+          controller: _genderController =
+              TextEditingController(text: data['gender']),
+        ),
         ElevatedButton(onPressed: () => updateData(), child: Text("Update"))
       ],
     );
@@ -38,6 +43,7 @@ class _ProfileState extends State<Profile> {
       "name": _nameController!.text,
       "phone": _phoneController!.text,
       "age": _ageController!.text,
+      "gender": _genderController!.text,
     }).then((value) => print("Updated Successfully"));
   }
 
