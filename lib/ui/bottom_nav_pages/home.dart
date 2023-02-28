@@ -149,13 +149,22 @@ class _HomeState extends State<Home> {
                         child: Column(
                           children: [
                             AspectRatio(
-                                aspectRatio: 2,
-                                child: Container(
-                                    color: Colors.yellow,
-                                    child: Image.network(
-                                      _products[index]["product-img"][0],
-                                    ))),
-                            Text("${_products[index]["product-name"]}"),
+                              aspectRatio: 2,
+                              child: Container(
+                                color: Colors.grey,
+                                child: Image.network(
+                                  _products[index]["product-img"][1],
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "${_products[index]["product-name"]}",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Text(
                                 "${_products[index]["product-price"].toString()}"),
                           ],
