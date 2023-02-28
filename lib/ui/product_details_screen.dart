@@ -19,8 +19,7 @@ class _ProductDetailsState extends State<ProductDetails> {
   Future addToCart() async {
     final FirebaseAuth _auth = FirebaseAuth.instance;
     var currentUser = _auth.currentUser;
-    CollectionReference _collectionRef =
-        FirebaseFirestore.instance.collection("users-cart-items");
+    CollectionReference _collectionRef = FirebaseFirestore.instance.collection("users-cart-items");
     return _collectionRef
         .doc(currentUser!.email)
         .collection("items")
